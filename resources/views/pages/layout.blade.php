@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shminke</title>
+	<link rel="stylesheet" href="{{ asset('styles\reset.css') }}">
+	<link rel="stylesheet" href="{{ asset('styles\styles.css') }}">
+</head>
+<body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168543069-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-168543069-1');
+</script>
+
+@stack('scripts')
+
+	<div class="page-container clearfix">
+		<header class="side-container">
+			<div class="header-tagline">
+				<div class="header-wripper">
+					<h1 class="site-title">
+						alena shminke
+					</h1>
+				</div>
+			</div>
+			<nav class="site-menu">
+				<ul>
+					<li class="{{ Route::currentRouteName() == 'index' ? 'active' : '' }}"><a href="{{ route('index') }}">Home</a></li>
+					<li class="{{ Route::currentRouteName() == 'photography' ? 'active' : '' }}"><a href="{{ route('photography') }}">Photography</a></li>
+					<li class="{{ Route::currentRouteName() == 'about' ? 'active' : '' }}"><a href="{{ route('about') }}">About</a></li>
+					<li class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Contact<a/></li>
+				</ul>
+			</nav>
+			<div class="blog-link-wrapper"><a href="https://shminke.wordpress.com/">&#10155; welcome to my blog</a></div>
+			<div class="copyright-social-wrapper">
+				<div class="social-wrapper">
+					<ul class="social-links">
+						<li><img src="{{ asset('img\ee.gif') }}" alt="">EST</li>
+						<li><img src="{{ asset('img\rus.gif') }}" alt="">RUS</li>
+						<li><img src="{{ asset('img\eng.gif') }}" alt="">ENG</li>
+					</ul>
+				</div>
+				<div class="copyright"> &copy Assembled by Maxberg</div>
+			</div>
+
+		</header>
+
+		<div class="main-container">
+			<main class="content-container clearfix">
+
+				<!--  Content block  -->
+                    @section('content')
+		
+                    @show
+				<!-- end content block -->
+
+			</main>			
+		</div>
+
+	</div>
+</body>
+</html>
