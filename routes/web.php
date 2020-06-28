@@ -17,7 +17,11 @@ Route::get('/about', ['as' => 'about', 'uses' => 'AboutController@show']);
 Route::get('/contact', ['as' => 'contact', 'uses' => 'ContactController@show']);
 
 Route::group(['prefix'=>'edit'], function () {
+
 	Route::get('about', ['as' => 'edit.about', 'uses' => 'AboutController@edit']);
 	Route::post('about', ['as'=> 'save.about', 'uses' => 'AboutController@save']);
 	Route::post('about/upload', ['as'=> 'upload.about', 'uses' => 'AboutController@upload']);
+
+	Route::get('index', ['as' => 'edit.index', 'uses' => 'IndexController@edit']);
+	Route::post('index/upload', ['as'=> 'upload.index', 'uses' => 'IndexController@upload']);
 });

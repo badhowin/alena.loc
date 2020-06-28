@@ -17,13 +17,13 @@
 			<div class="header-tagline">
 				<div class="header-wripper">
 					<h1 class="site-title">
-						alena shminke
+						admin zone
 					</h1>
 				</div>
 			</div>
 			<nav class="site-menu">
 				<ul>
-					<li class="{{ Route::currentRouteName() == 'index' ? 'active' : '' }}"><a href="{{ route('index') }}">Home</a></li>
+					<li class="{{ Route::currentRouteName() == 'index' ? 'active' : '' }}"><a href="{{ route('edit.index') }}">Home</a></li>
 					<li class="{{ Route::currentRouteName() == 'photography' ? 'active' : '' }}"><a href="{{ route('photography') }}">Photography</a></li>
 					<li class="{{ Route::currentRouteName() == 'edit.about' ? 'active' : '' }}"><a href="{{ route('edit.about') }}">About</a></li>
 					<li class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Contact<a/></li>

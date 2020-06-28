@@ -1,0 +1,19 @@
+.list-thumbonail{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dl-icon {
+	left: -50%;
+	position: relative;
+	opacity: 0.5;
+	z-index: 5;
+}
+
+.upload-button{
+	position: relative;
+	z-index: 1;
+
+}
+
