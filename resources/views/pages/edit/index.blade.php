@@ -32,7 +32,7 @@
 
 			<form id="img-form" method="post" action="{{ route('upload.index') }}" enctype="multipart/form-data">
 				{{ csrf_field() }}
-				<input id="img-input" type="file" name="indexImage" style="display: none" />
+				<input id="img-input" type="file" name="indexImage" multiple style="display: none" />
 				<input id="img-position" type="hidden" name="position" value="0" />
 			</form>
 

@@ -8,7 +8,7 @@ use App\Http\Requests;
 
 class ContactController extends Controller
 {
-     public function show() {
+     public function show($language) {
     	return view('pages.contact');
     }
 }

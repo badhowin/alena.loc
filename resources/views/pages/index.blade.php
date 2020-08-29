@@ -1,4 +1,4 @@
-@extends('pages.layout');
+@extends('pages.layout')
 
 @section('content')
 	<div class="portfolio-container">

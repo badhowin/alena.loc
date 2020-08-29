@@ -8,26 +8,44 @@ use App\Http\Requests;
 
 use App\AboutPage;
 use App\AboutImage;
+use App\Language;
 
 class AboutController extends Controller
 {
-    public function show() {
-    	$aboutPage = AboutPage::get()->where('active', 1)->first();
+    public function show($language = '') {
+
+
+        if ($language == "") {
+
+            if (session()->get('language') == "")
+                $language = "en";
+            else
+                $language = session()->get('language');
+        } 
+
+
+
+        session()->put(['language' => $language]);
+
+    	$aboutPage = AboutPage::get()->where('active', 1)->where('language', $language)->first();
         $aboutPage->aboutImage = AboutImage::get()->where('active', 1)->first()->img;
-        return view('pages.about', $aboutPage);
+        $languages = language::orderBy('position')->get();
+        return view('pages.about', ['aboutPage' => $aboutPage, 'languages' => $languages]);
     }
 
 
     public function edit(){
 
         $AboutImage = AboutImage::get()->where('active', 1)->first();
-    	return view('pages.edit.about', ['aboutImage' => $AboutImage->img]);
+        $languages = language::orderBy('position')->get();
+
+        return view('pages.edit.about', ['aboutImage' => $AboutImage->img, 'languages' => $languages]);
     }
 
     public function save(Request $req){
 
 
-        AboutPage::where('active', 1)->update(['active'=>'0']);
+        AboutPage::where('active', 1)->where('language', $req->language)->update(['active'=>'0']);
         $AboutPage = new AboutPage();
                         
         $AboutPage->header = $req->header;
@@ -36,7 +54,7 @@ class AboutController extends Controller
         $AboutPage->active = 1;
         $AboutPage->save();
         
-        return redirect()->route('about');
+        return redirect()->route('edit.about');
     }
 
     public function upload(Request $req){

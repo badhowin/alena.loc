@@ -7,13 +7,25 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\IndexImage;
+use App\Language;
 
 class IndexController extends Controller
 {
-    public function show(){
+    public function show($language = ''){
+
+        if ($language == "") {
+
+            if (session()->get('language') == "")
+                $language = "en";
+            else
+                $language = session()->get('language');
+        }  
+
+        session()->put(['language' => $language]);
 
     	$indexImages = indexImage::orderBy('position')->get()->where('active', 1);
-    	return view('pages.index', ['indexImages' => $indexImages]);
+        $languages = language::orderBy('position')->get();
+        return view('pages.index', ['indexImages' => $indexImages, 'languages' => $languages]);
     }
 
     public function edit(){

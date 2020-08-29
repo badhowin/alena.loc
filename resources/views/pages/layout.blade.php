@@ -30,19 +30,20 @@
 			</div>
 			<nav class="site-menu">
 				<ul>
-					<li class="{{ Route::currentRouteName() == 'index' ? 'active' : '' }}"><a href="{{ route('index') }}">Home</a></li>
-					<li class="{{ Route::currentRouteName() == 'photography' ? 'active' : '' }}"><a href="{{ route('photography') }}">Photography</a></li>
-					<li class="{{ Route::currentRouteName() == 'about' ? 'active' : '' }}"><a href="{{ route('about') }}">About</a></li>
-					<li class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Contact<a/></li>
+					<li class="{{ Route::currentRouteName() == 'index' ? 'active' : '' }}"><a href="{{ route('index', ['language' => session()->get('language')]) }}">Home</a></li>
+					<li class="{{ Route::currentRouteName() == 'photography' ? 'active' : '' }}"><a href="{{ route('photography', ['language' => session()->get('language')]) }}">Photography</a></li>
+					<li class="{{ Route::currentRouteName() == 'about' ? 'active' : '' }}"><a href="{{ route('about', ['language' => session()->get('language')]) }}">About</a></li>
+					<li class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}"><a href="{{ route('contact', ['language' => session()->get('language')]) }}">Contact<a/></li>
 				</ul>
 			</nav>
 			<div class="blog-link-wrapper"><a href="https://shminke.wordpress.com/">&#10155; welcome to my blog</a></div>
 			<div class="copyright-social-wrapper">
 				<div class="social-wrapper">
 					<ul class="social-links">
-						<li><img src="{{ asset('img\ee.gif') }}" alt="">EST</li>
-						<li><img src="{{ asset('img\rus.gif') }}" alt="">RUS</li>
-						<li><img src="{{ asset('img\eng.gif') }}" alt="">ENG</li>
+						@foreach ($languages as $language)
+						<li><a href="{{ route( Route::currentRouteName(), ['lang' => $language->code]) }}"><img src="{{ asset('img').'/'.$language->img }}" alt="">{{ $language->logo }}</a></li>
+						@endforeach
+
 					</ul>
 				</div>
 				<div class="copyright"> &copy Assembled by Maxberg</div>

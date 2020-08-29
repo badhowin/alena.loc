@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', ['as' => 'index', 'uses' => 'IndexController@show']);
-Route::get('/photography', ['as' => 'photography', 'uses' => 'PhotographyController@show']);
-Route::get('/about', ['as' => 'about', 'uses' => 'AboutController@show']);
-Route::get('/contact', ['as' => 'contact', 'uses' => 'ContactController@show']);
+
 
 Route::group(['prefix'=>'edit'], function () {
 
@@ -24,4 +21,18 @@ Route::group(['prefix'=>'edit'], function () {
 
 	Route::get('index', ['as' => 'edit.index', 'uses' => 'IndexController@edit']);
 	Route::post('index/upload', ['as'=> 'upload.index', 'uses' => 'IndexController@upload']);
+
+	Route::get('photography', ['as' => 'add.photography', 'uses' => 'PhotographyController@add']);
+
 });
+
+
+
+	Route::get('{lang?}/', ['as' => 'index', 'uses' => 'IndexController@show'])->where('lang', 'ee|ru|en');
+	Route::get('{lang?}/photography', ['as' => 'photography', 'uses' => 'PhotographyController@show'])->where('lang', 'ee|ru|en');
+	Route::get('{lang?}/about', ['as' => 'about', 'uses' => 'AboutController@show'])->where('lang', 'ee|ru|en');
+	Route::get('{lang?}/contact', ['as' => 'contact', 'uses' => 'ContactController@show'])->where('lang', 'ee|ru|en');
+
+
+
+	
