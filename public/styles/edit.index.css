@@ -1,19 +1,35 @@
 .list-thumbonail{
+	position: relative;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 }
 
 .dl-icon {
+	max-width: none;
 	left: -50%;
 	position: relative;
-	opacity: 0.5;
-	z-index: 5;
+
+	
+}
+
+.picture{
+	position: relative;
+
 }
 
 .upload-button{
 	position: relative;
-	z-index: 1;
+
+	
+
+}
+
+.button-wrapper{
+	left: -50%;
+	
+	position: relative;
+	opacity: 0.5;
 
 }
 

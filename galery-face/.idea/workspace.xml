@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="76da9f72-fab2-41c0-a56f-7def216fe84f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../resources/views/pages/edit/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/AboutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/AboutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/PhotographyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/PhotographyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/add-gallery-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/add-gallery-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/gallery-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/gallery-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/styles/edit.index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../public/styles/edit.index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/pages/edit/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/pages/edit/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/pages/edit/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/pages/edit/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/pages/edit/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/pages/edit/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/web.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="20bNf7yU49ukGEbq9xfnZ5M9RTe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/article/article-action-buttons" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Mask\WWW\alena.loc\galery-face\src\components\article\article-action-buttons" />
+      <recent name="E:\Mask\WWW\alena.loc\galery-face\src\components\modal-box" />
+      <recent name="E:\Mask\WWW\alena.loc\galery-face\src\content-box" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Mask\WWW\alena.loc\galery-face\src\components" />
+      <recent name="E:\Mask\WWW\alena.loc\galery-face\src\gallery-cell" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76da9f72-fab2-41c0-a56f-7def216fe84f" name="Default Changelist" comment="" />
+      <created>1636309427411</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636309427411</updated>
+      <workItem from="1636309428961" duration="6378000" />
+      <workItem from="1636489348968" duration="3852000" />
+      <workItem from="1636825168017" duration="5871000" />
+      <workItem from="1636831660214" duration="1776000" />
+      <workItem from="1636875677820" duration="6918000" />
+      <workItem from="1637001062167" duration="5200000" />
+      <workItem from="1637007358242" duration="1059000" />
+      <workItem from="1637089956832" duration="4962000" />
+      <workItem from="1637262282294" duration="7806000" />
+      <workItem from="1638304747067" duration="5208000" />
+      <workItem from="1638383829512" duration="8622000" />
+      <workItem from="1638472365440" duration="3606000" />
+      <workItem from="1641413844836" duration="214000" />
+      <workItem from="1641724354326" duration="56000" />
+      <workItem from="1642865424248" duration="145000" />
+      <workItem from="1642939613461" duration="944000" />
+      <workItem from="1644424218514" duration="192000" />
+      <workItem from="1645369988839" duration="183000" />
+      <workItem from="1645387358381" duration="2000" />
+      <workItem from="1645552638654" duration="594000" />
+      <workItem from="1646239110126" duration="8000" />
+      <workItem from="1646329401731" duration="595000" />
+      <workItem from="1648747127276" duration="35000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

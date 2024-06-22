@@ -1,0 +1,30 @@
+.added-articles-list {
+    width: 100%;
+}
+
+.added-article {
+    display: flex;
+    align-items: center;
+    width: 825px;
+    height: 110px;
+    border: 1px solid #888888;
+    padding-left: 4px;
+    margin-bottom: 15px;
+    font-family: MainFont,Helvetica,Arial,sans-serif;
+}
+.added-picture{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #888888;
+}
+
+.added-picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.action-btn-wrapper {
+    margin-left: auto;
+    text-transform: uppercase;
+}

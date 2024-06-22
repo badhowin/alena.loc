@@ -40,9 +40,15 @@
 				@forelse ($indexImages as $image)
 				<div class="listing-item">
 					<div class="list-thumbonail">
-						<img class=""  src="{{ asset('storage/'.$image->img) }}">
-						<img class="dl-icon upload-button"  value="{{ $image->position }}" src="{{ asset('img/download.png') }}">									
+
+						<img class="picture"  src="{{ asset('storage/'.$image->img) }}">
+						<div class=button-wrapper>
+							<img class="dl-icon upload-button"  value="{{ $image->position }}" src="{{ asset('img/download.png') }}">
+						</div>
+
+						
 					</div>								
+					
 				</div>
 				@empty
 				<div>no images on database</div>

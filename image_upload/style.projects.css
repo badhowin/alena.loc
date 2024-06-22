@@ -1,0 +1,43 @@
+
+.content-wrapper {
+	width: 660px;
+}
+
+.thumb-pic-border{
+	max-width: 100%;
+	
+}
+
+.thumb-img-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.thumb-image {
+	width: 106px;
+	margin: 5px 10px;
+	border: 3px solid white;
+}
+
+.thumb-image-underlight {
+	border-bottom: 3px solid red;
+}
+
+.thumb-image-selected {
+	border: 3px solid red;
+}
+
+.language-swiches-wrapper{
+	margin-bottom: 15px;
+}
+
+
+.language-input{
+	display: none;
+}
+
+.current-lang{
+	display: block;
+}
+

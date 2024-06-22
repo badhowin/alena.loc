@@ -1,0 +1,10 @@
+.article-btn-edit{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #888888;
+    cursor: pointer;
+}

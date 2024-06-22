@@ -8,7 +8,7 @@
 	@stack('styles')
 </head>
 <body>
-
+<script type="text/javascript" src="{{ asset('/scripts/ckeditor/ckeditor.js') }}"></script>
 @stack('scripts')
 
 
@@ -26,7 +26,7 @@
 					<li class="{{ Route::currentRouteName() == 'index' ? 'active' : '' }}"><a href="{{ route('edit.index') }}">Home</a></li>
 					<li class="{{ Route::currentRouteName() == 'photography' ? 'active' : '' }}"><a href="{{ route('photography') }}">Photography</a></li>
 					<li class="{{ Route::currentRouteName() == 'edit.about' ? 'active' : '' }}"><a href="{{ route('edit.about') }}">About</a></li>
-					<li class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Contact<a/></li>
+					<li class="{{ Route::currentRouteName() == 'edit.contact' ? 'active' : '' }}"><a href="{{ route('edit.contact') }}">Contact<a/></li>
 				</ul>
 			</nav>
 			

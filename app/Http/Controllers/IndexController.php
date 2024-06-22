@@ -13,15 +13,9 @@ class IndexController extends Controller
 {
     public function show($language = ''){
 
-        if ($language == "") {
+        
 
-            if (session()->get('language') == "")
-                $language = "en";
-            else
-                $language = session()->get('language');
-        }  
-
-        session()->put(['language' => $language]);
+        $language = parent::setLanguage($language);
 
     	$indexImages = indexImage::orderBy('position')->get()->where('active', 1);
         $languages = language::orderBy('position')->get();

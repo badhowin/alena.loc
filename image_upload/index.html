@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width,initial-scale=1'/>
+	<title>Shminke</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="style.projects.css">
+</head>
+<body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168543069-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-168543069-1');
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+	<div class="page-container clearfix">
+		
+		<nav class="mobile-menu-box">
+			<div class="mobile-menu-header">
+				<div class="mobile-logo">Alena Shminke</div>
+				<div id="mobile-menu-button"><div class="mobile-menu-caption">Menu</div><div class="mobile-menu-ico"><div></div><div></div><div></div></div></div>
+			</div>
+			<div id="mobile-menu-list">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="gallery.html">Photography</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<header class="side-container">
+			<div class="header-tagline">
+				<div class="header-wripper">
+					<h1 class="site-title">
+						alena shminke
+					</h1>
+				</div>
+			</div>
+			<nav class="site-menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="gallery.html">Photography</a></li>
+					<li><a href="about.html">About</a></li>
+					<li class="active">Contact</li>
+				</ul>
+			</nav>
+			<div class="blog-link-wrapper"><a href="https://shminke.wordpress.com/">&#10155; welcome to my blog</a></div>
+			<div class="copyright-social-wrapper">
+				<div class="social-wrapper">
+					<ul class="social-links">
+						<li><img src="img\ee.gif" alt="">EST</li>
+						<li><img src="img\rus.gif" alt="">RUS</li>
+						<li><img src="img\eng.gif" alt="">ENG</li>
+					</ul>
+				</div>
+				<div class="copyright"> &copy Assembled by Maxberg</div>
+			</div>
+
+		</header>
+
+		<div class="main-container">
+			<main class="content-container clearfix">
+
+				<!--  Content block  -->
+
+				<article>
+
+					<div class="contact-container clearfix">
+						<h1 class="contact-title">Projects</h1>
+						<div class="language-swiches-wrapper">
+						<input type="radio" name="language" value="language-est" class="radio-button">
+						<label for="male">EST</label><br>
+						<input type="radio" name="language" value="language-rus" class="radio-button">
+						<label for="female">RUS</label><br>
+						<input type="radio" name="language" value="language-eng" class="radio-button">
+						<label for="other">ENG</label>
+						</div>
+						<div class="contact-content">
+								<p  class="language-input language-est">
+									<label>Header (EST)<br> 
+									<input type="text" name="header-est" value="">
+									</label>
+								</p>
+								<p class="language-input language-rus">
+									<label>Header (RUS)<br> 
+									<input type="text" name="header-rus" value="">
+									</label>
+								</p>
+								<p  class="language-input language-eng">
+									<label>Header (ENG)<br> 
+									<input type="text" name="header-eng" value="">
+									</label>
+								</p>
+								<p  class="language-input language-est">
+									<label>Project caption (EST)<br>
+									<textarea name="message" cols="40" rows="10"></textarea>
+									</label>
+								</p>
+								<p class="language-input language-rus">
+									<label>Project caption (RUS)<br>
+									<textarea name="message" cols="40" rows="10"></textarea>
+									</label>
+								</p>
+								<p class="language-input language-eng">
+									<label>Project caption (ENG)<br>
+									<textarea name="message" cols="40" rows="10"></textarea>
+									</label>
+								</p>
+
+							<p>&nbsp;</p>
+							<hr>
+							<p>&nbsp;</p>
+							<form action="" id="contact_form" method="post" class="mail-form">
+								<p>
+									<label> Your Name (required)<br> 
+									<input type="text" name="name" value="" size="40" class="input-name">
+									</label>
+								</p>
+								<p>
+									<label> Your Email (required)<br> 
+									<input type="email" name="email" value="" size="40" class="input-email">
+									</label>
+								</p>
+								<p>
+									<label> Subject<br> 
+									<input type="text" name="subject" value="" size="40" class="input-subject">
+									</label>
+								</p>
+								<p>
+									<label> Your Message<br>
+									<textarea name="message" cols="40" rows="10" class="textarea-message"></textarea>
+									</label>
+								</p>
+								<p>
+									<input id="btn" type="button" value="Send" class="button-submit">
+									<span id="indicator"></span>
+								</p>
+							</form>
+							<div id="response-status" style="visibility: hidden">err</div>
+
+						</div>
+
+					</div>
+				</article>
+
+				<!-- end content block -->
+
+			</main>			
+		</div>
+
+	</div>
+<script src="script.js"></script>
+</body>
+</html>

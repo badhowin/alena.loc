@@ -1,0 +1,52 @@
+.modal-box{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+
+.message-box{
+    display: block;
+    background-color: white;
+}
+
+.message-text-wrapper {
+    font-family: MainFont,Helvetica,Arial,sans-serif;
+
+    display: block;
+    padding: 50px;
+}
+
+.message-text-header {
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #888888;
+    margin-bottom: 35px;
+}
+
+.message-text-content {
+    margin-bottom: 35px;
+}
+
+.mesage-button-wrapper{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.mesage-button {
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 1px solid #888888;
+    cursor: pointer;
+    user-select: none;
+}

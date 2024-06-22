@@ -23,7 +23,7 @@
 				@forelse ($indexImages as $image)
 				<div class="listing-item">
 					<div class="list-thumbonail">
-						<img class="upload-button" value="{{ $image->position }}" src="{{ asset('storage/'.$image->img) }}">									
+						<img class="upload-button" value="{{ $image->position }}" src="{{ asset('/storage/'.$image->img) }}">									
 					</div>								
 				</div>
 				@empty

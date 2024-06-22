@@ -1,0 +1,13 @@
+.add-button {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-transform: uppercase;
+     width: 100%;
+     height: 75px;
+     border: 1px solid #888888;
+     margin-bottom: 40px;
+     cursor: pointer;
+     user-select: none;
+     font-family: MainFont,Helvetica,Arial,sans-serif;
+ }
