@@ -18,7 +18,7 @@ class AboutController extends Controller
         $language = parent::setLanguage($language);
 
     	$aboutPage = AboutPage::get()->where('active', 1)->where('language', $language)->first();
-    	//$aboutPage->aboutImage = AboutImage::get()->where('active', 1)->first()->img;
+    	$aboutPage->aboutImage = AboutImage::get()->where('active', 1)->first()->img;
         $languages = language::orderBy('position')->get();
         return view('pages.about', ['aboutPage' => $aboutPage, 'languages' => $languages]);
     }

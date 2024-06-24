@@ -33,3 +33,28 @@
 .about-form-container textarea {
     height: 450px;
 }
+
+.about-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dl-icon {
+    max-width: none;
+    position: relative;
+}
+
+#upload-button {
+    position: relative;
+}
+
+.upload-button {
+    position: relative;
+}
+
+.button-wrapper {
+    position: absolute;
+    opacity: 0.5;
+}

@@ -13,7 +13,10 @@
 @section('content')
 	<article>
 		<div class="about-img">
-			<img src="{{ asset('storage/'.$aboutImage) }}" id="upload-button" alt="">						
+			<img src="{{ asset('storage/'.$aboutImage) }}" id="upload-button" alt="">	
+            <div class=button-wrapper>
+                <img class="dl-icon upload-button"  src="{{ asset('img/download.png') }}">
+            </div>					
 		</div>
 		<form id="img-form" method="post" action="{{ route('upload.about') }}" enctype="multipart/form-data">
 			{{ csrf_field() }}
