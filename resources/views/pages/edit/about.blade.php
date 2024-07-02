@@ -48,7 +48,7 @@
 			                    <label>Content</label>
 			                </span>
 			                <span>
-			                    <textarea id="content-{{ $language->code }}" name="content" class="form-item"></textarea><br />
+			                    <textarea id="content-{{ $language->code }}" name="content-{{ $language->code }}" class="form-item"></textarea><br />
 			                </span>
 			            </div>
 			                
@@ -58,6 +58,7 @@
 		    	   	</form>  
 	        </div>
 	        <script>
+					alert(CKEDITOR);
 					CKEDITOR.replace( 'content-{{ $language->code }}' );
 			</script>
 				@endforeach

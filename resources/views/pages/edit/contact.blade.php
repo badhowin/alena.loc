@@ -1,5 +1,5 @@
 @extends('pages.edit.layout')
-contact
+
 @push('styles')
 <link rel="stylesheet" href="{{ asset('styles\edit.contact.css') }}">
 @endpush
@@ -37,8 +37,11 @@ contact
 			                    <label>Content</label>
 			                </span>
 			                <span>
-			                    <textarea id="content-{{ $language->code }}" name="content" class="form-item"></textarea><br />
+			                    <textarea id="content-{{ $language->code }}" name="content-{{ $language->code }}" class="form-item"></textarea><br />
 			                </span>
+							<script>
+									CKEDITOR.replace( 'content-{{ $language->code }}' );
+							</script>
 			            </div>
 			                
 			            <div class="form-line single">
@@ -46,9 +49,7 @@ contact
 			            </div>
 		    	   	</form>  
 	        </div>
-	        <script>
-					CKEDITOR.replace( 'content-{{ $language->code }}' );
-			</script>
+	        
 				@endforeach
 			</div>
 		</div>
