@@ -25,6 +25,7 @@ Route::group(['prefix'=>'edit'], function () {
 	Route::get('photography', ['as' => 'add.photography', 'uses' => 'PhotographyController@add']);
 
 	Route::get('contact', ['as' => 'edit.contact', 'uses' => 'ContactController@edit']);
+	Route::post('contact', ['as' => 'save.contact', 'uses' => 'ContactController@save']);
 
 });
 
