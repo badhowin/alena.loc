@@ -2,12 +2,23 @@
 @extends('pages.edit.layout');
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('styles\edit.about.css') }}">
+<link rel="stylesheet" href="{{ asset('styles/edit.about.css') }}">
+<link rel="stylesheet" href="{{ asset('styles/ckeditor5_custom.css') }}">
+<link rel="stylesheet" href="{{ asset('ckeditor5/ckeditor5.css') }}">
 @endpush
 
 @push('scripts')
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="{{ asset('scripts\image.upload.js')}}"></script>
+	<script src="{{ asset('scripts/image.upload.js') }}"></script>
+    <script type="importmap">{!! '{
+                "imports": {
+                     "ckeditor5": "'.asset('ckeditor5/ckeditor5.js').'",
+                    "ckeditor5/": "'.asset('ckeditor5/').'"
+                }
+            }' 
+        !!}
+    </script>
+    <script type="module" src="{{ asset('scripts/ckeditor5_custom.js') }}"></script>
 @endpush
 
 @section('content')
@@ -58,7 +69,6 @@
 		    	   	</form>  
 	        </div>
 	        <script>
-					alert(CKEDITOR);
 					CKEDITOR.replace( 'content-{{ $language->code }}' );
 			</script>
 				@endforeach
