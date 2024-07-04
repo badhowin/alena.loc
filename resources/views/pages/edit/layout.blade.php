@@ -8,7 +8,6 @@
 	@stack('styles')
 </head>
 <body>
-<script type="text/javascript" src="{{ asset('/scripts/ckeditor/ckeditor.js') }}"></script>
 @stack('scripts')
 
 

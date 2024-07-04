@@ -4,7 +4,7 @@
 @push('styles')
 <link rel="stylesheet" href="{{ asset('styles/edit.about.css') }}">
 <link rel="stylesheet" href="{{ asset('styles/ckeditor5_custom.css') }}">
-<link rel="stylesheet" href="{{ asset('ckeditor5/ckeditor5.css') }}">
+<link rel="stylesheet" href="{{ asset('ckeditor/ckeditor5.css') }}">
 @endpush
 
 @push('scripts')
@@ -12,13 +12,13 @@
 	<script src="{{ asset('scripts/image.upload.js') }}"></script>
     <script type="importmap">{!! '{
                 "imports": {
-                     "ckeditor5": "'.asset('ckeditor5/ckeditor5.js').'",
-                    "ckeditor5/": "'.asset('ckeditor5/').'"
+                     "ckeditor5": "'.asset('ckeditor/ckeditor5.js').'",
+                    "ckeditor5/": "'.asset('ckeditor/').'"
                 }
             }' 
         !!}
     </script>
-    <script type="module" src="{{ asset('scripts/ckeditor5_custom.js') }}"></script>
+    
 @endpush
 
 @section('content')
@@ -59,17 +59,31 @@
 			                    <label>Content</label>
 			                </span>
 			                <span>
-			                    <textarea id="content-{{ $language->code }}" name="content-{{ $language->code }}" class="form-item"></textarea><br />
+							<div class="editor-container editor-container_classic-editor" id="editor-container">
+								<div class="editor-container__editor"><textarea id="content-{{ $language->code }}" name="content-{{ $language->code }}" class="form-item"></textarea><br /></div>
+							</div>
+			                    
 			                </span>
 			            </div>
 			                
 			            <div class="form-line single">
-			            	<input type="submit">
+			            	<input type="submit" class="submit-{{ $language->code }}">
 			            </div>
 		    	   	</form>  
 	        </div>
-	        <script>
-					CKEDITOR.replace( 'content-{{ $language->code }}' );
+			<script type="module">
+	                import { createEditor } from "{{ asset('scripts/ckeditor5_custom.js') }}";
+					createEditor('#content-{{ $language->code }}').then( function(editor){alert(editor.getData())});
+					
+					
+					document.querySelector( '.submit-{{ $language->code }}' )
+							.addEventListener( 'click', () => {
+								alert(editor.getData());
+								const editorData = editor.getData();
+								console.log(editorData);
+						});
+
+					
 			</script>
 				@endforeach
 			</div>
