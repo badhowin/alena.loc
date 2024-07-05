@@ -39,7 +39,7 @@
 
   			<div class="form-wrapper">
 
-					<form class="content-form" method="post" action="{{ route('save.about') }}">
+					<form class="content-form form-{{ $language->code }}" method="post" action="{{ route('save.about') }}">
 					<input type="hidden" name=language value="{{ $language->code }}">
 		            {{ csrf_field() }}
 			            <div class="form-line single">
@@ -73,17 +73,7 @@
 	        </div>
 			<script type="module">
 	                import { createEditor } from "{{ asset('scripts/ckeditor5_custom.js') }}";
-					createEditor('#content-{{ $language->code }}').then( function(editor){alert(editor.getData())});
-					
-					
-					document.querySelector( '.submit-{{ $language->code }}' )
-							.addEventListener( 'click', () => {
-								alert(editor.getData());
-								const editorData = editor.getData();
-								console.log(editorData);
-						});
-
-					
+					createEditor('{{ $language->code }}');
 			</script>
 				@endforeach
 			</div>

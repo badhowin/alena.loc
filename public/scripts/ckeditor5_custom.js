@@ -94,15 +94,30 @@ const editorConfig = {
     placeholder: 'Type or paste your content here!',
 };
 
-export async function createEditor(selector) {
-    let editor;
-
-    ClassicEditor.create(document.querySelector(selector), editorConfig)
+export async function createEditor(langCode) {
+    console.log(langCode);
+    ClassicEditor.create(
+        document.querySelector('#content-' + langCode),
+        editorConfig
+    )
         .then((newEditor) => {
-            editor = newEditor;
-            return editor;
+            let editor = newEditor;
+
+            transferDatatoTextbox(editor, langCode);
         })
         .catch((error) => {
             console.error(error);
         });
+}
+
+function transferDatatoTextbox(editor, langCode) {
+    const submitButton = document.querySelector('.submit-' + langCode);
+
+    submitButton.addEventListener('click', (event) => {
+        //event.preventDefault();
+        document.querySelector('#content-' + langCode).innerHTML =
+            editor.getData();
+
+        //document.querySelector('.form-' + langCode).submit();
+    });
 }
