@@ -1,12 +1,22 @@
 @extends('pages.edit.layout')
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('styles\edit.contact.css') }}">
+<link rel="stylesheet" href="{{ asset('styles/edit.contact.css') }}">
+<link rel="stylesheet" href="{{ asset('styles/ckeditor5_custom.css') }}">
+<link rel="stylesheet" href="{{ asset('ckeditor/ckeditor5.css') }}">
 @endpush
 
 @push('scripts')
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="scripts\script.js"></script>
+    <script type="importmap">{!! '{
+        "imports": {
+             "ckeditor5": "'.asset('ckeditor/ckeditor5.js').'",
+            "ckeditor5/": "'.asset('ckeditor/').'"
+            }
+        }' 
+    !!}
+    </script>
 @endpush
 
 @section('content')
@@ -37,11 +47,10 @@
 			                    <label>Content</label>
 			                </span>
 			                <span>
-			                    <textarea id="content-{{ $language->code }}" name="content-{{ $language->code }}" class="form-item"></textarea><br />
+			                    <div class="editor-container editor-container_classic-editor" id="editor-container">
+                                    <div class="editor-container__editor"><textarea id="content-{{ $language->code }}" name="content-{{ $language->code }}" class="form-item"></textarea><br /></div>
+                                </div>
 			                </span>
-							<script>
-									CKEDITOR.replace( 'content-{{ $language->code }}' );
-							</script>
 			            </div>
 			                
 			            <div class="form-line single">
@@ -49,6 +58,10 @@
 			            </div>
 		    	   	</form>  
 	        </div>
+                    <script type="module">
+                        import { createEditor } from "{{ asset('scripts/ckeditor5_custom.js') }}";
+                        createEditor('{{ $language->code }}');
+                    </script>
 	        
 				@endforeach
 			</div>

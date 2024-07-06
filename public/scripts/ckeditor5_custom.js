@@ -95,29 +95,8 @@ const editorConfig = {
 };
 
 export async function createEditor(langCode) {
-    console.log(langCode);
     ClassicEditor.create(
         document.querySelector('#content-' + langCode),
         editorConfig
-    )
-        .then((newEditor) => {
-            let editor = newEditor;
-
-            transferDatatoTextbox(editor, langCode);
-        })
-        .catch((error) => {
-            console.error(error);
-        });
-}
-
-function transferDatatoTextbox(editor, langCode) {
-    const submitButton = document.querySelector('.submit-' + langCode);
-
-    submitButton.addEventListener('click', (event) => {
-        //event.preventDefault();
-        document.querySelector('#content-' + langCode).innerHTML =
-            editor.getData();
-
-        //document.querySelector('.form-' + langCode).submit();
-    });
+    );
 }

@@ -34,12 +34,11 @@ class AboutController extends Controller
 
     public function save(Request $req){
 
-
         AboutPage::where('active', 1)->where('language', $req->language)->update(['active'=>'0']);
         $AboutPage = new AboutPage();
                         
         $AboutPage->header = $req->header;
-        $AboutPage->content = $req->content;
+        $AboutPage->content = $req->input('content-'.$req->language);
         $AboutPage->language = $req->language;
         $AboutPage->active = 1;
         $AboutPage->save();

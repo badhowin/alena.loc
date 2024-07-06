@@ -1,3 +1,7 @@
+.content-container {
+    width: 830px;
+}
+
 .contact-form-container {
     display: flex;
     flex-direction: column;
