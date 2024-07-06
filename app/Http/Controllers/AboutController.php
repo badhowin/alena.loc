@@ -28,8 +28,10 @@ class AboutController extends Controller
 
         $AboutImage = AboutImage::get()->where('active', 1)->first();
         $languages = language::orderBy('position')->get();
-
-        return view('pages.edit.about', ['aboutImage' => $AboutImage->img, 'languages' => $languages]);
+        $aboutPages = AboutPage::get()->where('active', 1);
+        return view('pages.edit.about', ['aboutImage' => $AboutImage->img, 
+                                         'languages' => $languages,
+                                         'aboutPages' => $aboutPages]);
     }
 
     public function save(Request $req){

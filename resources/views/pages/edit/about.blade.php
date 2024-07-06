@@ -50,7 +50,11 @@
 			                    <label>Header</label>
 			                </span>
 			                <span>
-			                    <input type="text" name="header" class="form-item"><br />
+			                    <input type="text" 
+                                       name="header" 
+                                       class="form-item" 
+                                       value="{{ $aboutPages->where('language', $language->code)->first()->header }}">
+                                <br />
 			                </span>
 			            </div>
 			            
@@ -60,7 +64,14 @@
 			                </span>
 			                <span>
 							<div class="editor-container editor-container_classic-editor" id="editor-container">
-								<div class="editor-container__editor"><textarea id="content-{{ $language->code }}" name="content-{{ $language->code }}" class="form-item"></textarea><br /></div>
+								<div class="editor-container__editor">
+                                    <textarea id="content-{{ $language->code }}" 
+                                              name="content-{{ $language->code }}" 
+                                              class="form-item">
+                                                {{ $aboutPages->where('language', $language->code)->first()->content }}
+                                    </textarea>
+                                    <br />
+                                </div>
 							</div>
 			                    
 			                </span>
