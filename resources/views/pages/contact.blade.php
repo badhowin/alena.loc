@@ -2,7 +2,7 @@
 
 @push('scripts')
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="scripts\script.js"></script>
+	<script src="{{ asset('scripts/script.js') }}"></script>
 @endpush
 
 @section('content')
