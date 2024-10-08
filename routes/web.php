@@ -29,12 +29,18 @@ Route::group(['prefix'=>'edit'], function () {
 
 });
 
-
-
-	Route::get('{lang?}/', ['as' => 'index', 'uses' => 'IndexController@show'])->where('lang', 'ee|ru|en');
-	Route::get('{lang?}/photography', ['as' => 'photography', 'uses' => 'PhotographyController@show'])->where('lang', 'ee|ru|en');
-	Route::get('{lang?}/about', ['as' => 'about', 'uses' => 'AboutController@show'])->where('lang', 'ee|ru|en');
-	Route::get('{lang?}/contact', ['as' => 'contact', 'uses' => 'ContactController@show'])->where('lang', 'ee|ru|en');
+Route::group(
+    [
+        'prefix' => LocalizationService::locale(),
+        'middleware' => 'setLanguage',
+    ],
+    function(){
+    	Route::get('/', ['as' => 'index', 'uses' => 'IndexController@show'])->where('lang', 'ee|ru|en');
+    	Route::get('/gallery.html', ['as' => 'photography', 'uses' => 'PhotographyController@show'])->where('lang', 'ee|ru|en');
+    	Route::get('/about.html', ['as' => 'about', 'uses' => 'AboutController@show'])->where('lang', 'ee|ru|en');
+    	Route::get('/contact.html', ['as' => 'contact', 'uses' => 'ContactController@show'])->where('lang', 'ee|ru|en');
+    } 
+);
 
 
 

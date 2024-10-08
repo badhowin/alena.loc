@@ -47,6 +47,7 @@
 					</ul>
 				</div>
 				<div class="copyright"> &copy Assembled by Maxberg</div>
+                <div class="copyright">{{ __('app.lang') }}</div>
 			</div>
 
 		</header>
